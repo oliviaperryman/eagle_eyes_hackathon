@@ -19,7 +19,7 @@ DEFAULT_DATASET_FOLDER = os.path.expanduser(os.path.join('~', 'Downloads', 'eagl
 
 
 def get_default_dataset_folder() -> str:
-    return DEFAULT_DATASET_FOLDER
+    return os.environ.get("DEFAULT_DATASET_FOLDER", DEFAULT_DATASET_FOLDER)
 
 
 def set_default_dataset_folder(folder: str):
